@@ -35,7 +35,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="visual-coordinate coordinate-b">INDEPENDENT<br />BY DESIGN</div>
           <div className="visual-cross cross-a">+</div><div className="visual-cross cross-b">+</div>
         </div>
-        <div className="hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 — 04 / DIGITAL · TECH · AUTO · LIFE</span></div>
+        <div className="hero-bottom"><span>{locale === 'pl' ? 'PRZEWIŃ, ABY ODKRYWAĆ' : 'SCROLL TO EXPLORE'}</span><span>01 — 04 / DIGITAL · TECH · AUTO · LIFE</span></div>
       </section>
 
       <section className="focus-section section-shell">
@@ -52,12 +52,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="work-section section-shell">
         <div className="section-heading work-heading"><div><p className="eyebrow">{t.selected}</p><h2>{t.selectedTitle}</h2></div><Link className="text-link" href={`/${locale}/projects`}>{t.explore} ↗</Link></div>
         <Link href={`/${locale}/projects`} className="featured-project">
-          <div className="project-art"><div className="project-art-grid"/><div className="project-art-label">EXEANT / DIGITAL WORKSHOP</div><div className="project-art-mark">E<span>.</span></div><div className="project-art-index">001 — PERSONAL PROJECT</div></div>
-          <div className="project-info"><p className="eyebrow">{t.projectLabel}</p><h3>{t.projectTitle}</h3><p>{t.projectDesc}</p><span className="text-link">VIEW PROJECT ↗</span></div>
+          <div className="project-art"><div className="project-art-grid"/><div className="project-art-label">{locale === 'pl' ? 'EXEANT / CYFROWA PRACOWNIA' : 'EXEANT / DIGITAL WORKSHOP'}</div><div className="project-art-mark">E<span>.</span></div><div className="project-art-index">001 — PERSONAL PROJECT</div></div>
+          <div className="project-info"><p className="eyebrow">{t.projectLabel}</p><h3>{t.projectTitle}</h3><p>{t.projectDesc}</p><span className="text-link">{locale === 'pl' ? 'ZOBACZ PROJEKT' : 'VIEW PROJECT'} ↗</span></div>
         </Link>
       </section>
 
-      <section className="contact-band section-shell"><div><p className="eyebrow">OPEN FOR SELECT PROJECTS</p><h2>{t.contactTitle}</h2><p>{t.contactDesc}</p></div><Link className="button button-primary" href={`/${locale}/contact`}>{t.contactCta} <span>↗</span></Link></section>
+      <section className="contact-band section-shell"><div><p className="eyebrow">{locale === 'pl' ? 'OTWARTY NA WYBRANE PROJEKTY' : 'OPEN FOR SELECT PROJECTS'}</p><h2>{t.contactTitle}</h2><p>{t.contactDesc}</p></div><Link className="button button-primary" href={`/${locale}/contact`}>{t.contactCta} <span>↗</span></Link></section>
     </>
   );
 }
