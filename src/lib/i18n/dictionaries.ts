@@ -3,7 +3,7 @@ export type Locale = (typeof locales)[number];
 
 export const dictionaries = {
   pl: {
-    nav: { digital: 'Digital', projects: 'Projekty', tech: 'Tech & Gear', beyond: 'Beyond', contact: 'Kontakt' },
+    nav: { digital: 'Digital', projects: 'Projekty', tech: 'Tech & Gear', beyond: 'Poza ekranem', contact: 'Kontakt' },
     eyebrow: 'NIEZALEŻNY TWÓRCA CYFROWY · POLSKA',
     headlineA: 'Ciekawość napędza',
     headlineB: 'tworzenie.',
@@ -15,7 +15,7 @@ export const dictionaries = {
     digital: 'Digital', digitalDesc: 'Strony internetowe i projekty cyfrowe.',
     tech: 'Tech & DIY', techDesc: 'Elektronika, sprzęt i eksperymenty.',
     auto: 'Automotive', autoDesc: 'JDM, motoryzacja i kultura samochodowa.',
-    travel: 'Beyond', travelDesc: 'Podróże, fotografia i wszystko pomiędzy.',
+    travel: 'Poza ekranem', travelDesc: 'Podróże, fotografia i wszystko pomiędzy.',
     selected: 'WYBRANE REALIZACJE', selectedTitle: 'Pomysły zamienione w projekty.',
     projectLabel: 'PERSONAL PROJECT · 2026', projectTitle: 'EXEANT — własna przestrzeń cyfrowa',
     projectDesc: 'Projektowanie i rozwój miejsca, które łączy digital, technologię i zainteresowania.',
