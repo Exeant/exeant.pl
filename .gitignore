@@ -6,3 +6,6 @@ out
 .vercel
 .DS_Store
 *.tsbuildinfo
+/dist/
+.vinext/
+.cloudflare/
