@@ -7,18 +7,17 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const links = [
     ['digital', t.nav.digital], ['projects', t.nav.projects], ['tech-gear', t.nav.tech], ['beyond', t.nav.beyond], ['contact', t.nav.contact],
   ];
-
   return (
     <header className="site-header">
-      <Link className="wordmark" href={`/${locale}`} aria-label="EXEANT home">EXEANT<span>.</span></Link>
-      <nav className="desktop-nav" aria-label="Main navigation">
+      <Link className="wordmark" href={`/${locale}`} aria-label={locale === 'pl' ? 'Strona główna EXEANT' : 'EXEANT home'}>EXEANT<span>.</span></Link>
+      <nav className="desktop-nav" aria-label={locale === 'pl' ? 'Nawigacja główna' : 'Main navigation'}>
         {links.map(([href, label]) => <Link key={href} href={`/${locale}/${href}`}>{label}</Link>)}
       </nav>
       <div className="header-actions">
         <Link className={locale === 'pl' ? 'lang active' : 'lang'} href="/pl">PL</Link>
         <span className="lang-separator">/</span>
         <Link className={locale === 'en' ? 'lang active' : 'lang'} href="/en">EN</Link>
-        <Link className="menu-link" href={`/${locale}/contact`}>LET'S TALK <span>↗</span></Link>
+        <Link className="menu-link" href={`/${locale}/contact`}>{locale === 'pl' ? 'NAPISZ DO MNIE' : "LET'S TALK"} <span>↗</span></Link>
       </div>
     </header>
   );
