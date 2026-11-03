@@ -1,0 +1,1 @@
+export default function AdminLoginPage() { return <main className="admin-placeholder"><p className="eyebrow">EXEANT CONTROL / PRIVATE AREA</p><h1>Admin access</h1><p>Panel administracyjny zostanie aktywowany po skonfigurowaniu Supabase Auth.</p><a href="/pl">← Back to website</a></main>; }
